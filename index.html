@@ -8,11 +8,112 @@
     <link rel="stylesheet" type="text/css" media="screen" href="Style.css">
     <link rel="icon" type="img/png" href="Img/Pizza-Margherita_1.png">
     <script src="Script.js"></script>
+
+    <!-- External scripts -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDPp2IdJmCt8Gdt3h1NSCEHWqc9yQjJMY&callback=myMap"></script>
+    </script>
+
 </head>
 <body>
     
+    <ul class="navbar">
+        <li id="Logo"><a href="##">FOOD.<span>LOGO</span></a></li>
+        <li><a href="##">ABOUT</a></li>
+        <li><a href="##">OUR FOOD</a></li>
+        <li><a href="##">PLANS</a></li>
+        <li><a href="##">CONTACT US</a></li>
+    </ul>
+
+    <section class="Content1">
+        <div class="container">
+            <h1>
+                Have no time 
+                to prepare <span>food</span>?
+            </h1>
+
+            <p>
+             Choose one of our plans, enter delivery time
+             and enjoy delicious food without leaving your home!
+            </p>
+
+            <button>Order Food</button>
+
+            <ul class="socialise">
+                <li><a href="##"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="##"><i class="fab fa-dribbble"></i></a></li>
+                <li><a href="##"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div>
+        <img src="./Img/DirectionHelper.svg" id="Direction_Helper"/>
+    </section >
+
+    <section class="Content2">
+        <div class="container">
+            <h1>OUR FOOD</h1>
+            <div>
+                <span><i class="fas fa-plus"></i></span>
+                <h3>Signature Pizzas</h3>
+                <p>Choose one of our plans, enter delivery time.</p>
+            </div>
+            <div>
+                <span><i class="fas fa-plus"></i></span>
+                <h3>Oven-Baked Subs</h3>
+                <p>Choose one of our plans, enter delivery time
+                    and enjoy delicious food without leaving your home!
+                </p>
+            </div>
+            <div>
+                <span><i class="fas fa-plus"></i></span>
+                <h3>Wings, Sides & More</h3>
+                <p>Choose one of our plans, enter delivery time.</p>
+            </div>
+
+            <button>Order Food</button>
+        </div>
+    </section>
+
+    <section class="Content3">
+        <div class="container">
+            <h1>PLANS</h1>
+            <div id="pizza1">
+                <div id="filter"></div>
+                <p>Flat<span>20%</span><br/>Min. Order Value ₹300 </p>
+            </div>
+            <div id="pizza2">
+                <div id="filter"></div>
+                <p>GET 2 MEDIUM<br/><span>PIZZA</span><br/>AT  ₹199 EACH </p>
+            </div><div id="circle"></div>
+        </div>
+        
+    </section>
+
+    <section class="Content4">
+        <div class="container">
+            <h1>Contact Us</h1>
+
+            <div id="filter">
+                <form action="">
+                    <input type="name" required placeholder="Full Name">
+                    <input type="phone" required placeholder="Phone No.">
+                    <textarea placeholder="Massege" required></textarea>
+                    <label><input type="checkbox" required>I agree with all conditions </label>
+                    <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+            <div class="map"></div>
+        </div>
+    </section>
+
+    <footer>
+
+        <hr>
+        <span id="copyright">©All Rights Reserved.</span>
+        <div id="filter"></div>
+    </footer>
 
 
-    
 </body>
 </html>

@@ -1,0 +1,447 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 30px 0px 0px 70px;
+    margin: 0px;
+    height: calc(100% - 30px);
+    width: calc(100% - 70px);
+    position: absolute;
+}
+ 
+.navbar{
+    display: block;
+    position: absolute;
+    padding: 0px;
+    margin: 0px;
+    width: calc(100% - 70px);
+    z-index: 1;
+}
+
+li{
+    position: relative;
+    display: inline;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 100;
+    padding: 15px 30px 15px 30px;
+    font-weight: 300;
+}
+
+#Logo a{
+    position: absolute;
+    font-size: 30px;
+    font-weight: 600;
+    margin-top:-10px;
+    padding: 0px 0px 0px 2px;
+    color: black;
+ }
+
+ span{
+     color: #F8A22F;
+ }
+
+
+ .navbar li:not(#Logo){
+    left: calc(100% - 700px);
+ }
+ 
+
+ .navbar li:last-child a{
+    transition: all 0.3s;
+    border: 2px solid transparent;
+    color: white;
+    background: #F8A22F;
+    border-radius: 20px;
+ }
+
+/* Hover actions----------------------------------- */
+ /* a:hover:before{
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 5px;
+    border-radius: 5px;
+    background: #F8A22F;
+    display: block;
+} */
+
+
+ .navbar li:last-child a:hover{
+    background: transparent;
+    border: 2px solid #F8A22F;
+ } 
+
+/* //---------- Body elements Starts / Section 1 ----------// */
+ section{
+    position: relative;
+    width: 100%;
+    height: calc(100% + 30px);
+    margin-top: -30px;
+    padding: 0px;
+}
+
+.Content1{
+    background-image: url(./Img/Section1.svg);
+    background-repeat: no-repeat;
+    background-position: 100% 0%;
+    background-size: contain;
+}
+
+.container{
+    position: absolute;
+    width: 40%;
+    overflow: hidden;
+    height: calc(100% - 10px);
+}
+
+.container h1{
+    margin-top: 35%;
+    font-size: 55px;
+    font-weight: 400;
+}
+
+.Content1 .container p{opacity: .5;}
+
+.container p{
+    font-size: 18px;
+    color: black;
+    margin-top: 6%;
+}
+
+button{
+    transition: all 0.3s;
+    color: white;
+    background: #F8A22F;
+    border-radius: 30px;
+    padding: 15px 50px 15px 50px;
+    font-size: 18px;
+    cursor: pointer;
+    border:none;
+    outline: none;
+    margin-top: 6%;
+    border: 2px solid transparent;
+ }
+
+ button:hover{
+    color: black;
+    background: white;
+    border: 2px solid #F8A22F;
+ }
+
+ .socialise a{color: black;}
+
+ .socialise{
+    position: absolute;
+    opacity: .4;
+    top: calc(100% - 80px);
+    margin-left: -60px;
+ }
+
+ #Direction_Helper{
+    transform: scale(0.6,0.6);
+    position: absolute;
+    top: calc(100% - 85px);
+    left: calc(50% + 15px);
+    cursor: pointer;
+ }
+
+
+/* //---------- Section 2 ----------// */
+ .Content2{
+    background-image: url(./Img/Section2.svg);
+    background-repeat: no-repeat;
+    background-position: -40% 35%;
+    background-size: 70% 70%;
+
+    margin-left: -70px;
+    width: calc(100% + 70px);
+}
+
+.Content2 .container{
+    position: absolute;
+    left: calc(100% - 550px);
+    top: -80px;
+}
+
+
+ .Content2 .container h1::after{
+    content: "";
+    width: 35%;
+    height: 3px;
+    background: #F8A22F;
+    border-radius: 3px;
+    display: block;
+    margin-top: 10px;
+
+}
+
+.Content2 .container p{
+    margin-top: -10px;
+    margin-left: 40px;
+}
+
+.Content2 .container h3{
+    margin-left: 40px;
+}
+
+.Content2 .container span{
+    border-radius: 50%;
+    position: absolute; 
+    color:white;
+    background: #F8A22F;
+    padding: 10px 10px 7px 10px;
+}
+
+
+/* //---------- Section 3 ----------// */
+
+.Content3{
+    background-image: url(./Img/pizzaBg.png);
+    background-size:contain;
+    margin-left: -70px;
+    width: calc(100% + 70px);
+    position: relative;
+    
+}
+
+.Content3 .container{
+    background-color: rgba(248, 160, 45,0.9);
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+
+.Content3 .container h1{
+    display: block;
+    position: absolute;
+    top:0px;
+    left: calc(50% - 100px);
+    top: 60px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.Content3 .container h1::after{
+    position: absolute;
+    content: "";
+    width: 50%;
+    height: 4px;
+    background:white;
+    border-radius: 3px;
+    margin-top: 70px;
+    left: calc(50% - 45px);
+}
+
+
+@font-face {
+    font-family: Hobo;
+    src: url(./Fonts/HoboStd.otf);
+  }
+  
+
+
+#pizza1, #pizza2{
+    font-family: Hobo;
+    position: relative;
+    padding: 0px;
+    width: 550px;
+    height: 450px;
+    border-radius: 20px;
+    display: block;
+    float: left;
+    margin-right: 60px;
+    left: calc(50% - 585px);
+    top: 28%;
+    background-image: url(./Img/plansPic2.png);
+    background-size:cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+
+}
+
+#pizza2{
+    background-image: url(./Img/plansPic1.png);
+}
+
+
+#pizza1 p, #pizza2 p{
+    position: absolute;
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.904);
+    width: 400px;
+    top: calc(100% - 200px);
+    margin-left: 40px;
+    overflow: hidden;
+    text-align: left;
+}
+
+#pizza1 p{
+    left: calc(100% - 435px);
+    margin-left: 0px;
+    text-align: right;
+    margin-top: 45px;
+}
+
+#pizza2 span{font-size: 60px;}
+#pizza1 span{font-size: 80px;}
+
+#filter{
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: .2;
+}
+
+#circle{
+    /* position: absolute; */
+    display: block;
+    width: 130%;
+    height: 400px;
+    background:white;
+    border-radius: 50%;
+    margin: 35% 0px 0px -15%;
+    /* z-index: -1; */
+}
+
+/* //---------- Section 4 ----------// */
+
+ .Content4{
+    /* background-image: url(./Img/pizzaBg.png);
+    background-size:contain;
+    margin-left: -70px;
+    width: calc(100% + 70px); */
+    position: relative;
+    z-index: -1;
+    /* overflow: v; */
+}
+
+
+
+.Content4 .container h1{
+    display: block;
+    position: absolute;
+    top:0px;
+    top: 50px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.Content4 .container h1::after{
+    position: absolute;
+    content: "";
+    width: 30%;
+    height: 4px;
+    background: #F8A22F;
+    border-radius: 3px;
+    margin-top: 70px;
+    left: 0px;
+}
+
+.Content4  #filter{
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    background-image: url(./Img/pizzaBg.png);
+    background-size: contain;
+    border-radius: 20px;
+    opacity: 1;
+    overflow: hidden;
+    top:25%;
+}
+
+form{
+    position: absolute;
+    width:100%;
+    height:100%;
+    background: rgba(248, 161, 47, 0.89);
+    text-align: center;
+}
+
+
+
+label,input[type="name"],input[type="phone"],textarea{
+    font-family: Montserrat;
+    position: relative;
+    top: 30px;
+    width: 65%;
+    height: 5px;
+    padding: 20px;
+    border-radius: 2px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    outline: none;
+    border: transparent;
+}
+
+textarea{height: 100px;}
+
+ .Content4 label{
+    padding: 0px;
+    display: inline-block;
+    top: 10px;
+    color: white;
+    text-align: left;
+}
+
+label input{
+    position: absolute;
+    margin-left: -21px;
+    width: 20px;
+    height: 20px;
+}
+
+
+.Content4 button{
+    background: white;
+    font-family: Montserrat;
+    color:black;
+    border-radius: 5px;
+    padding-top:12px; 
+    padding-bottom:12px; 
+    margin-top: 12px;
+}
+
+.Content4 button:hover{color: #F8A22F}
+
+
+.map{
+    top: 50%;
+    height: 50%;
+    margin-left: -70px;
+    width: calc(100% + 70px);
+    z-index: -1;
+}
+/*
+.Content4 .container{
+    background-color: rgba(248, 160, 45,0.9);
+    text-align: center;
+    width: 100%;
+    height: 100%;
+} */
+
+
+/* //---------- Footer ----------// */
+footer{
+    height: 40%;
+    margin-left: -70px;
+    width: calc(100% + 70px);
+    background-image: url(./Img/footer.png);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;   
+    border: 1px solid black;
+}
+
+
+footer #filter{
+    width:100%;
+    height:100%;
+    /* background: white; */
+    /* opacity: 0.6; */
+    position: absolute;
+    
+}
