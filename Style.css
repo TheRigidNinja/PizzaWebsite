@@ -146,6 +146,14 @@ button{
     top: calc(100% - 85px);
     left: calc(50% + 15px);
     cursor: pointer;
+    animation: show 4s cubic-bezier(.62,-0.68,.78,1.55) infinite;
+ }
+
+ @keyframes show{
+     0%{transform: translate(0px,0px)scale(0.6,0.6);opacity:.5;}
+     10%{transform: translate(0px,50px)scale(0.6,0.6);opacity:1;}
+     35%{opacity: 0;transform: translate(0px,150px)scale(0,0);}
+     100%{opacity: 0;}
  }
 
 
