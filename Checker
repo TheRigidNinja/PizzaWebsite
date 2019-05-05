@@ -1,0 +1,381 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    top: 0px;
+    left:0px;
+    text-decoration: none;
+    list-style: none;
+    color: black;
+}
+
+body{   
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+}
+
+section{
+    position: relative;
+    display: block;
+    width: calc(100% - 140px);
+    padding: 0px 70px; 
+}
+
+section[class *="Content"]{min-height: 100%;}
+
+h1{font-size: 50px;}
+
+button{
+    transition: all 0.3s;
+    color: white;
+    background: #F8A22F;
+    border-radius: 30px;
+    padding: 15px 30px 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    border:none;
+    outline: none;
+    border: 2px solid transparent;
+ }
+
+ button:hover{
+    color: black;
+    background: white;
+    border: 2px solid #F8A22F;
+ }
+
+ button:active{transform:scale(.95,.95);}
+
+
+/*---------- Navigation Bar ---------- */
+.navbar{
+    /* height: 0px; */
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+    /* background: rgba(255, 255, 255, 0.87); */
+    border-radius: 0px 0px 40px 40px;
+    padding-bottom: 10px
+}
+
+.navContainer{
+    position: sticky;
+    height: 0px;z-index: 1;
+}
+
+.navbar div{width: 600px;}
+
+a{
+    text-decoration: none;
+    font-weight: 100;
+    padding: 15px 30px 15px  30px;
+    float: left;
+}
+ 
+/*----------  Logo ---------- */
+#Logo a{
+    color: black;
+    font-size: 30px;
+    font-weight: 600;
+    padding-left: 0px
+ }
+ span{color: #F8A22F;}
+
+ /* ---------- Body elements Starts / Section 1 ---------- */
+ .Content1{
+    background-image: url(./Img/Section1.svg);
+    background-repeat: no-repeat;
+    background-position: 100% 0%;
+    background-size: contain;
+}
+
+.Content1 button {margin-top: 10%}
+.Content1 .container{
+    position: relative;
+    top: 10pc;
+    width: 60%;
+    height: calc(100% - 10px);
+}
+
+.Content1 .container *{
+    margin-bottom: 30px;
+}
+
+.container p{
+    font-size: 18px;
+    color: black;
+    margin-top: 6%;
+}
+
+ .socialise{
+    text-align: center;
+    position: absolute;
+    height: 50px;
+    width:calc(100% - 140px);
+    display: flex;
+    top: calc(100% - 100px);
+    padding: 0px 50px;
+    z-index: 1;
+ }
+
+ #Direction_Helper{
+    transform: scale(0.6,0.6);
+    position: absolute;
+    top: calc(100% - 110px);
+    left: calc(50% - 40px);
+    cursor: pointer;
+    animation: show 4s cubic-bezier(.62,-0.68,.78,1.55) infinite;
+ }
+
+ @keyframes show{
+     0%{transform: translate(0px,0px)scale(0.6,0.6);opacity:.5;}
+     10%{transform: translate(0px,50px)scale(0.6,0.6);opacity:1;}
+     35%{opacity: 0;transform: translate(0px,150px)scale(0,0);}
+     100%{opacity: 0;}
+ }
+
+
+ /* ------------- Section 2 ------------*/
+ .Content2{
+    background-image: url(./Img/Section2.svg);
+    background-repeat: no-repeat;
+    background-position: -40% 35%;
+    background-size: 70% 70%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-end; 
+    padding: 0px; 
+}
+
+.Content2 .container{
+    width: 550px;
+    margin-top: 80px; 
+}
+
+  .Content2 .container h1::after{
+    content: "";
+    width: 8pc;
+    height: 3px;
+    background: #F8A22F;
+    border-radius: 3px;
+    display: block;
+    margin-top: 15px;
+} 
+
+.Content2 .container p{
+    margin-top: 0px;
+    /* margin-left: 40px; */
+}
+
+.Content2 .container h3{margin-left: 40px;}
+.Content2 .container span{
+    position: relative;
+    border-radius: 50%;
+    color:white;
+    background: #F8A22F;
+    padding: 10px 10px 7px 10px;
+    top:25px;
+} 
+
+.Content2 .container span i{color:white;} 
+.Content2 button,.container div{margin-top: 5%;} 
+
+
+
+/* ---------- Section 3 ---------- */
+
+.Content3{
+    background-image: url(./Img/pizzaBg.png);
+    background-size:contain;
+    /* margin-left: -70px;
+    width: calc(100% + 70px);
+    position: relative; */
+    
+}
+/* 
+.Content3 .container{
+    background-color: rgba(248, 160, 45,0.9);
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+
+.Content3 .container h1{
+    display: block;
+    position: absolute;
+    top:0px;
+    left: calc(50% - 100px);
+    top: 60px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.Content3 .container h1::after{
+    position: absolute;
+    content: "";
+    width: 50%;
+    height: 4px;
+    background:white;
+    border-radius: 3px;
+    margin-top: 70px;
+    left: calc(50% - 45px);
+}
+
+
+@font-face {
+    font-family: Hobo;
+    src: url(./Fonts/HoboStd.otf);
+  }
+  
+
+
+#pizza1, #pizza2{
+    font-family: Hobo;
+    position: relative;
+    padding: 0px;
+    width: 550px;
+    height: 450px;
+    border-radius: 20px;
+    display: block;
+    float: left;
+    margin-right: 60px;
+    left: calc(50% - 585px);
+    top: 28%;
+    background-image: url(./Img/plansPic2.png);
+    background-size:cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+
+}
+
+#pizza2{
+    background-image: url(./Img/plansPic1.png);
+}
+
+
+#pizza1 p, #pizza2 p{
+    position: absolute;
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.904);
+    width: 400px;
+    top: calc(100% - 200px);
+    margin-left: 40px;
+    overflow: hidden;
+    text-align: left;
+}
+
+#pizza1 p{
+    left: calc(100% - 435px);
+    margin-left: 0px;
+    text-align: right;
+    margin-top: 45px;
+}
+
+#pizza2 span{font-size: 60px;}
+#pizza1 span{font-size: 80px;}
+
+#filter{
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: .2;
+} */
+
+#circle{
+    /* position: absolute; */
+    display: block;
+    width: 130%;
+    height: 400px;
+    background:white;
+    border-radius: 50%;
+    margin: 35% 0px 0px -15%;
+    /* z-index: -1; */
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 1000px){
+    .Content1 .container{
+        /* width: 50%; */
+    }
+
+    section{
+        width: 100%;
+        padding: 0px;
+    }
+
+    .Content1 .container{
+        width: calc(100% - 40px);
+        height: auto;
+        top: 80px;
+        background: rgba(43, 41, 41, 0.637);
+        padding: 20px;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    .Content1 .container h1,.Content1 .container p{
+        color: white;
+        font-size: .9em
+    }
+
+    .Content1 .container h1{
+        font-size: 2.5em
+    }
+
+    .Content1{background-size: cover;}
+    .socialise{justify-content: center;margin-left: 15px}
+    .socialise i{
+        font-size: 1.2em;
+        color: rgb(255, 255, 255);
+        background: rgba(0, 0, 0, 0.603);
+        padding: 15px;
+        border-radius: 2px;
+    }
+
+    /*-------------------- Section 2 --------------------*/
+    .Content2{
+        background-size: contain;
+        background-position: 0% 60%;
+        display: block;
+        text-align: center
+    }
+
+    .Content2 .container{width: auto;}
+    .Content2 .container div{
+        background: rgba(43, 41, 41, 0.767);
+        padding: 40px 20px;
+        border-radius: 5px;
+    } 
+
+    .Content2 .container span{
+        top: -15px;
+        text-align: center
+    }
+
+    .Content2 .container p,.Content2 h2{
+        color: white;
+        margin: 0px;
+    } 
+
+    .Content2 .container h1::after{
+        margin-left: calc(50% - 4pc)
+    } 
+}
+
+
+@media screen and (max-width: 700px){
+    /* --------- Nav bar --------- */
+    .navbar div{
+        display: none;
+    }
+}

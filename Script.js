@@ -12,7 +12,7 @@ window.onload = function(){
       center: myLatLng,
       zoom:13,
     };
-    var map = new google.maps.Map(document.querySelector(".map"),mapProp);
+    var map = new google.maps.Map(document.querySelector("map"),mapProp);
 
     var marker = new google.maps.Marker({
         position: myLatLng,

@@ -1,113 +1,25 @@
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 30px 0px 0px 70px;
-    margin: 0px;
-    height: calc(100% - 30px);
-    width: calc(100% - 70px);
-    position: absolute;
+:root{
+    --main-left: 70px;
+    --nav-padding: 70px;
+    --fontSize-h1: 3.5vw;
 }
- 
-.navbar{
-    display: block;
-    position: absolute;
+
+
+*{
     padding: 0px;
     margin: 0px;
-    width: calc(100% - 70px);
-    z-index: 1;
-}
-
-li{
-    position: relative;
-    display: inline;
-}
-
-a{
+    top: 0px;
+    left:0px;
     text-decoration: none;
-    color: white;
-    font-size: 16px;
-    font-weight: 100;
-    padding: 15px 30px 15px 30px;
+    list-style: none;
+    color: black;
 }
 
-#Logo a{
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     position: absolute;
-    font-size: 30px;
-    font-weight: 600;
-    margin-top:-10px;
-    padding: 0px 0px 0px 2px;
-    color: black;
- }
-
- span{
-     color: #F8A22F;
- }
-
-
- .navbar li:not(#Logo){
-    left: calc(100% - 700px);
- }
- 
-
- .navbar li:last-child a{
-    transition: all 0.3s;
-    border: 2px solid transparent;
-    color: white;
-    background: #F8A22F;
-    border-radius: 20px;
- }
-
-/* Hover actions----------------------------------- */
- /* a:hover:before{
-    position: absolute;
-    content: "";
-    width: 100px;
-    height: 5px;
-    border-radius: 5px;
-    background: #F8A22F;
-    display: block;
-} */
-
-
- .navbar li:last-child a:hover{
-    background: transparent;
-    border: 2px solid #F8A22F;
- } 
-
-/* //---------- Body elements Starts / Section 1 ----------// */
- section{
-    position: relative;
     width: 100%;
-    height: calc(100% + 30px);
-    margin-top: -30px;
-    padding: 0px;
-}
-
-.Content1{
-    background-image: url(./Img/Section1.svg);
-    background-repeat: no-repeat;
-    background-position: 100% 0%;
-    background-size: contain;
-}
-
-.container{
-    position: absolute;
-    width: 40%;
-    overflow: hidden;
-    height: calc(100% - 10px);
-}
-
-.container h1{
-    margin-top: 35%;
-    font-size: 55px;
-    font-weight: 400;
-}
-
-.Content1 .container p{opacity: .5;}
-
-.container p{
-    font-size: 18px;
-    color: black;
-    margin-top: 6%;
+    height: 100%;
 }
 
 button{
@@ -115,12 +27,11 @@ button{
     color: white;
     background: #F8A22F;
     border-radius: 30px;
-    padding: 15px 50px 15px 50px;
-    font-size: 18px;
+    padding: 10px 25px 10px 25px;
+    font-size: 14px;
     cursor: pointer;
     border:none;
     outline: none;
-    margin-top: 6%;
     border: 2px solid transparent;
  }
 
@@ -130,152 +41,174 @@ button{
     border: 2px solid #F8A22F;
  }
 
- .socialise a{color: black;}
+ button:active{transform:scale(.95,.95);}
+ span{color:#F8A22F}
+ h1{font-weight: 600}
 
- .socialise{
-    position: absolute;
-    opacity: .4;
-    top: calc(100% - 80px);
-    margin-left: -60px;
- }
-
- #Direction_Helper{
-    transform: scale(0.6,0.6);
-    position: absolute;
-    top: calc(100% - 115px);
-    left: calc(50% - 40px);
-    cursor: pointer;
-    animation: show 4s cubic-bezier(.62,-0.68,.78,1.55) infinite;
- }
-
- @keyframes show{
-     0%{transform: translate(0px,0px)scale(0.6,0.6);opacity:.5;}
-     10%{transform: translate(0px,50px)scale(0.6,0.6);opacity:1;}
-     35%{opacity: 0;transform: translate(0px,150px)scale(0,0);}
-     100%{opacity: 0;}
- }
-
-
-/* //---------- Section 2 ----------// */
- .Content2{
-    background-image: url(./Img/Section2.svg);
-    background-repeat: no-repeat;
-    background-position: -40% 35%;
-    background-size: 70% 70%;
-
-    margin-left: -70px;
-    width: calc(100% + 70px);
+ section{
+    position: relative;
+    width: 100%;
+    min-height: 100%;
 }
 
-.Content2 .container{
-    position: absolute;
-    left: calc(100% - 550px);
-    top: -80px;
-}
-
-
- .Content2 .container h1::after{
+.Section2 h1::after,.Section3 h1::after,.Section4 h1::after{
     content: "";
-    width: 35%;
+    width: 25%;
     height: 3px;
     background: #F8A22F;
     border-radius: 3px;
     display: block;
     margin-top: 10px;
-
 }
 
-.Content2 .container p{
-    margin-top: -10px;
-    margin-left: 40px;
+/*  ---------- Navigation bar ---------- */
+nav{
+    position: absolute;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+    width: calc(100% - (var(--main-left) + var(--nav-padding)));
+    padding:20px 0px 0px var(--main-left);
 }
 
-.Content2 .container h3{
-    margin-left: 40px;
+nav ul{width: 600px;}
+nav h1{padding-right:20px}
+nav a{
+    color: white;
+    float: left;
+    display: block;
+    padding: 10px 40px;
+}
+nav div{
+    font-size: 30px;
 }
 
-.Content2 .container span{
-    border-radius: 50%;
-    position: absolute; 
-    color:white;
-    background: #F8A22F;
-    padding: 10px 10px 7px 10px;
+nav small{
+    position: absolute
 }
 
 
-/* //---------- Section 3 ----------// */
+/*  ---------- Section 1  ---------- */
+.Section1{
+    background-image: url(./Img/Section1.svg);
+    background-repeat: no-repeat;
+    background-position: 100% 0%;
+    background-size: contain;
+    background-attachment: fixed;
+}
 
-.Content3{
-    background-image: url(./Img/pizzaBg.png);
-    background-size:contain;
-    margin-left: -70px;
-    width: calc(100% + 70px);
-    position: relative;
+.Section1 .content{
+    position: absolute;
+    top: 25%;
+    left: var(--main-left);
+    width: 50%;
     
 }
+.content h1{font-size: 5.4vw;font-weight: 500}
+.content p{font-size: 1.5vw}
+.content h1,.content p,.content button{margin-bottom: 50px;}
 
-.Content3 .container{
-    background-color: rgba(248, 160, 45,0.9);
+
+.Social img{
+    width: 20px;
+    height: 20px;
+    padding-left: 20px;
+}
+
+.Social{
+    position: absolute;
+    top: calc(100% - 50px);
+    left: var(--main-left);
+}
+
+#Helper{
+    position: absolute;
+    top: calc(100% - 70px);
+    left: calc(50% - 0px);
+    width: 40px;
+    height: 40px; 
+}
+
+/*  ---------- Section 2  ---------- */
+.Section2{
+    display: flex;
+    flex-flow: column;
+    align-items: flex-end;
+    justify-content: center;
+    width:calc(100% - 70px);
+    background-image: url(./Img/Section2.svg);
+    background-repeat: no-repeat;
+    background-position: -40% 35%;
+    background-size: 70% 70%;
+    background-attachment: fixed;
+
+}
+
+.Section2 .content{width: 500px}
+.Section2 .content h1{font-size: var(--fontSize-h1)}
+.Section2 .content div{position: relative;left: 40px}
+.Section2 .content img{position: absolute; left: -40px;}
+
+.Section2 img{
+    width: 30px;
+    height: 30px;
+    position: relative;
+}
+
+/*  ---------- Section 3  ---------- */
+.Section3{
+    background-image: url(./Img/Section3.png);
+    background-size:contain;
     text-align: center;
+    height: 100%;
+    overflow: hidden;
+}
+
+.Section3 .content{
     width: 100%;
     height: 100%;
+    background: rgba(248, 161, 47, 0.904);
 }
 
-
-.Content3 .container h1{
-    display: block;
-    position: absolute;
-    top:0px;
-    left: calc(50% - 100px);
-    top: 60px;
-    padding: 0px;
-    margin: 0px;
-}
-
-.Content3 .container h1::after{
-    position: absolute;
-    content: "";
-    width: 50%;
-    height: 4px;
+.Section3 h1{font-size: var(--fontSize-h1);padding-top: 40px;}
+.Section3 h1::after{
+    position: relative;
     background:white;
-    border-radius: 3px;
-    margin-top: 70px;
-    left: calc(50% - 45px);
+    width:4pc;
+    left: calc(50% - 2pc);
 }
-
 
 @font-face {
     font-family: Hobo;
     src: url(./Fonts/HoboStd.otf);
   }
   
-
-
-#pizza1, #pizza2{
+  .plan1, .plan2{
     font-family: Hobo;
     position: relative;
-    padding: 0px;
-    width: 550px;
-    height: 450px;
+    width: 500px;
+    height: 400px;
+    display:inline-block;
     border-radius: 20px;
-    display: block;
-    float: left;
-    margin-right: 60px;
-    left: calc(50% - 585px);
-    top: 28%;
     background-image: url(./Img/plansPic2.png);
-    background-size:cover;
+    background-size:contain;
     background-repeat: no-repeat;
     overflow: hidden;
-
+    background-attachment: fixed;
+    margin: 0px 50px 50px 0px;
+    background-position: -120% 0%;
+    z-index: 1;
+    
 }
 
-#pizza2{
+.plan2{
     background-image: url(./Img/plansPic1.png);
+    background-position: 180% 0%;
 }
 
-
-#pizza1 p, #pizza2 p{
+.plan1 p, .plan2 p{
     position: absolute;
     font-size: 30px;
     color: rgba(255, 255, 255, 0.904);
@@ -286,229 +219,142 @@ button{
     text-align: left;
 }
 
-#pizza1 p{
+.plan1 p{
     left: calc(100% - 435px);
     margin-left: 0px;
     text-align: right;
     margin-top: 45px;
 }
 
-#pizza2 span{font-size: 60px;}
-#pizza1 span{font-size: 80px;}
+.plan2 span{font-size: 60px;}
+.plan1 span{font-size: 80px;} 
 
-#filter{
-    width: 100%;
-    height: 100%;
-    background: black;
-    opacity: .2;
-}
-
-#circle{
-    /* position: absolute; */
-    display: block;
-    width: 130%;
-    height: 400px;
-    background:white;
-    border-radius: 50%;
-    margin: 35% 0px 0px -15%;
-    /* z-index: -1; */
-}
-
-/* //---------- Section 4 ----------// */
-
- .Content4{
-    /* background-image: url(./Img/pizzaBg.png);
-    background-size:contain;
-    margin-left: -70px;
-    width: calc(100% + 70px); */
-    position: relative;
-    z-index: -1;
-    /* overflow: v; */
-}
-
-
-
-.Content4 .container h1{
-    display: block;
-    position: absolute;
-    top:0px;
-    top: 50px;
-    padding: 0px;
-    margin: 0px;
-}
-
-.Content4 .container h1::after{
-    position: absolute;
-    content: "";
-    width: 30%;
-    height: 4px;
-    background: #F8A22F;
-    border-radius: 3px;
-    margin-top: 70px;
-    left: 0px;
-}
-
-.Content4  #filter{
-    width: 400px;
-    height: 400px;
-    position: absolute;
-    background-image: url(./Img/pizzaBg.png);
-    background-size: contain;
-    border-radius: 20px;
-    opacity: 1;
-    overflow: hidden;
-    top:25%;
-}
-
-form{
-    position: absolute;
-    width:100%;
-    height:100%;
-    background: rgba(248, 161, 47, 0.89);
-    text-align: center;
-}
-
-
-
-label,input[type="name"],input[type="phone"],textarea{
-    font-family: Montserrat;
-    position: relative;
-    top: 30px;
-    width: 65%;
-    height: 5px;
-    padding: 20px;
-    border-radius: 2px;
-    margin-bottom: 20px;
-    font-size: 15px;
-    outline: none;
-    border: transparent;
-}
-
-textarea{height: 100px;}
-
- .Content4 label{
-    padding: 0px;
-    display: inline-block;
-    top: 10px;
-    color: white;
-    text-align: left;
-}
-
-label input{
-    position: absolute;
-    margin-left: -21px;
-    width: 20px;
-    height: 20px;
-}
-
-
-.Content4 button{
+.Section3 small{
     background: white;
-    font-family: Montserrat;
-    color:black;
-    border-radius: 5px;
-    padding-top:12px; 
-    padding-bottom:12px; 
-    margin-top: 12px;
-}
-
-.Content4 button:hover{color: #F8A22F}
-
-
-.map{
+    position: absolute;
+    width: 150%;
+    height: 100%;
+    border-radius: 50%;
     top: 50%;
-    height: 50%;
-    margin-left: -70px;
-    width: calc(100% + 70px);
-    z-index: -1;
+    left: -25%;
 }
-/*
-.Content4 .container{
-    background-color: rgba(248, 160, 45,0.9);
+
+/*  ---------- Section 4  ---------- */
+.Section4 h1{font-size: var(--fontSize-h1);z-index: 1;font-weight: 500}
+.Section4 h1::after{width:5pc;height: 5px;}
+.Section4{padding-left: var(--nav-padding);width:calc(100% - var(--nav-padding))}
+.Section4 .content{
+    position: relative;
+    width: 18pc;
+    height: 20pc;
+    padding: 30px;
+    background-image: url(./Img/Section3.png);
+    background-size: contain;
+    padding-top: 50px;
+    border-radius: 20px;
+    top:50px;
+}
+
+.Section4 form{
+    position: absolute;
+    background: rgba(248, 161, 47, 0.904);
+    width: 100%;
+    height: 100%;
     text-align: center;
-    width: 100%;
-    height: 100%;
-} */
-
-
-/* //---------- Footer ----------// */
-footer{
-    position: relative;
-    height: 50%;
-    margin-left: -70px;
-    width: calc(100% + 70px);
-    overflow: hidden;
-    background: rgb(87, 87, 87);
+    border-radius: 20px;
 }
 
-
-footer #filter{
-    position: relative;
-    /* width:100%;
-    height:100%; */
-    background-image: url(./Img/footer.png);
-    background-size:80% 200%;
-    background-repeat: no-repeat;
-    background-position: 50% 60%;   
-    filter: blur(2px);
-    transform: scale(1.2);
-    /* background: white; */
-    opacity: 0.7;
+.Section4 input:not([type="checkbox"]),.Section4 textarea{
+    min-width: 65%;
+    max-width: 65%;
+    min-height: 20px;
+    padding: 10px 10px; 
+    outline: none;
+    border: none;
+    font-size: 12px;
+    border-radius: 2px;
+    margin-top:10px;
+}
+.Section4 textarea{height: 100px;max-height: 160px;}
+.Section4 input[type="checkbox"]{
+    margin-right: 10px;
 }
 
-.footContet{
-    position: absolute;
-    display: flex;
-    flex-flow: row;
-    text-align: left;
-    line-height: 40px;
-    align-items: center;
-    justify-content: space-around;
-    top: 0px;
-    height: 100%;
-    width: 100%;
-    /* top: calc(100% - 75px); */
+.policies{
+    padding-left: 10px;
+    max-width: 240px;
+    left: 100px;
+    margin-bottom: 10px;
 }
 
+label{color: white;font-size: 12px;}
 
-.footContet li{
-    display: block;
-}
-
-.footContet  #Logo a,.footContet li span{
-    color: white
-}
-
-
-/* .footContet #Logo{ */
-    /* position: relative;
-    flex-grow: -1;
-    align-items: flex-start;
-    top: -85px;
-    margin-left: -60px;
-} */
-
-.footContet .menu{
-    /* flex-grow: 1;    */
-}
-
-.footContet .social li{
-    /* display: inline-block; */
-}
-
-.footContet .social li{
-    position: relative;
-    /* display: inline-block; */
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: white;
-}
-
-
-.footContet .social li i{
-    position: absolute;
-    left: 40%;
-    top:35%;
+.Section4 input[type="submit"]{
+    cursor: pointer;
+    min-width: 120px;
+    font-size: 15px;
     color: #F8A22F;
 }
+
+.formContainer{
+    position: relative;
+    top: calc(50% - 160px);
+}
+
+map{
+    position: absolute;
+    top: 40%;
+    height: 60%;
+    width: 100%;
+    z-index: -1;
+    display: block;
+}
+
+
+/* --------------------  Footer -------------------- */
+footer{
+    min-height: 40%;
+    position: relative;
+    background: rgba(0, 0, 0, 0.479);
+    overflow: hidden;
+}
+
+#filter{
+    background-image: url(./Img/footer.png);
+    background-position: 50% 60%; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    filter: blur(2.2px);
+    transform: scale(1.2);
+    z-index: -1;
+    opacity: 0.8;
+}
+
+.footerContent{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding: 20px 0px;
+}
+
+.footerContent div{padding: 20px}
+.footerContent div,
+.footerContent span{
+    display: block;
+    line-height: 40px;
+}
+.footerContent h1,.footerContent h3, .footerContent span:not(.logo){
+    color: white;
+}
+#Footerlogo span{display: inline;}
+
+hr{border: .6px solid rgba(255, 255, 255, 0.699)}
+#copyright{padding: 20px 70px; display: block;color: white}
+
+.footerContent img{transition: all 0.3s}
+.footerContent img:hover{opacity: 0.8;}
+.footerContent img:active{transform: scale(0.9)}
